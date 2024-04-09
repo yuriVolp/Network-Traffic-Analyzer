@@ -14,7 +14,7 @@ TIME_WINDOW = datetime.timedelta(seconds=3)
 
 packet_times = []
 
-linha = "______________________________________________________________________________________________________________________"
+line = "______________________________________________________________________________________________________________________"
 
 # Argumentos do programa
 parser = argparse.ArgumentParser(description="Network Traffic Analyzer")
@@ -118,24 +118,24 @@ def network_monitoring(pkt, output_file=None, verboseArg=None):
 
     if output_file:
         with open(output_file, "a") as f:
-            f.write(linha)
+            f.write(line)
             f.write(result)
             if verboseArg:
                 f.write(verbose)
                 f.write("\n")
                 f.write(str(pkt))
                 f.write('\n')
-                f.write(linha)
+                f.write(line)
                 f.write('\n')
 
     else:
-        print(linha)
+        print(line)
         print(result)
         if verboseArg:
             print(verbose)
             print("\n")
             pkt.show()
-            print(linha)
+            print(line)
             print('\n')
 
 
