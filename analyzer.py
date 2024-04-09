@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# Yuri Yoshida Volpato
 
 from scapy.all import *
 import os
