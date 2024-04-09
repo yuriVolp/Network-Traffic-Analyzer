@@ -63,7 +63,7 @@ python analyzer.py [-h] [-i INTERFACE] [-c COUNT] [-f FILE] [-F FILTER] [-o OUTP
 3. Analyze a PCAP file:
 
     ```
-    python analyzer.py -f file.txt
+    python analyzer.py -f file.pcap
     ```
 
 4. Scan ports on a specific host:
