@@ -13,7 +13,7 @@
 1. Clone this repository to your local system:
 
     ```
-    git clone https://github.com/your-username/network-traffic-analyzer.git
+    git clone https://github.com/yuriVolp/network-traffic-analyzer.git
     ```
 
 2. Ensure you have Python 3.x installed on your system. If not installed, you can download it from [python.org](https://www.python.org/).
