@@ -26,8 +26,9 @@ This is a Python program for network traffic analysis using the Scapy library. I
 ## Usage
 
 You can run the program using the following command:
+```
 python analyzer.py [-h] [-i INTERFACE] [-c COUNT] [-f FILE] [-F FILTER] [-o OUTPUT] [-v] [-t TARGET]
-
+```
 ### Arguments:
 
 - `-i INTERFACE, --interface INTERFACE`: Specifies the network interface to capture packets from (default: eth0).
