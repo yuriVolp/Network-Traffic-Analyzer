@@ -32,7 +32,7 @@ args = parser.parse_args()
 # Dicionário para guardar as portas escaneadas por cada IP de origem
 scanned_ports_by_ip = {}
 
-# Limite de portas escaneadas possiveis 
+# Limite de portas escaneadas  
 LIMITSCAN = 10
 
 
