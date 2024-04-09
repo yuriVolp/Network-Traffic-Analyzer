@@ -1,7 +1,7 @@
 # Network Traffic Analyzer
 
 *A project for educational purposes*
-This is a Python program for network traffic analysis using the Scapy library. It provides functionalities to monitor real-time network traffic, detect potential DDoS attacks and port scans, as well as scan ports on a given host.
+-This is a Python program for network traffic analysis using the Scapy library. It provides functionalities to monitor real-time network traffic, detect potential DDoS attacks and port scans, as well as scan ports on a given host.
 
 ## Requirements
 
