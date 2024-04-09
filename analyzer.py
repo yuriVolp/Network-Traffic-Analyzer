@@ -60,6 +60,9 @@ def analyze_port_scan(pkt):
 
 # Função para detectar um possível DDoS
 def detect_DDoS(current_time):
+    if file.args:
+      return False
+      
     global packet_times
     packet_times.append(current_time)
     # limpa
