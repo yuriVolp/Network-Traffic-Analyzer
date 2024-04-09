@@ -1,24 +1,74 @@
 # Network Traffic Analyzer
-Este é um programa Python para análise de tráfego de rede usando a biblioteca Scapy. Ele fornece funcionalidades para monitorar o tráfego de rede em tempo real, detectar possíveis ataques DDoS e varreduras de portas, bem como escanear portas em um determinado host.
 
-## Requisitos
-Python 3.x
-Scapy
+This is a Python program for network traffic analysis using the Scapy library. It provides functionalities to monitor real-time network traffic, detect potential DDoS attacks and port scans, as well as scan ports on a given host.
 
-## Utilização
+## Requirements
+
+- Python 3.x
+- Scapy
+
+## Installation
+
+1. Clone this repository to your local system:
+
+    ```
+    git clone https://github.com/your-username/network-traffic-analyzer.git
+    ```
+
+2. Ensure you have Python 3.x installed on your system. If not installed, you can download it from [python.org](https://www.python.org/).
+
+3. Install the Scapy library by running the following command:
+
+    ```
+    pip install scapy
+    ```
+
+## Usage
+
+You can run the program using the following command:
 python analyzer.py [-h] [-i INTERFACE] [-c COUNT] [-f FILE] [-F FILTER] [-o OUTPUT] [-v] [-t TARGET]
 
-### Argumentos:
--i INTERFACE, --interface INTERFACE: Especifica a interface de rede para capturar pacotes (padrão: eth0).
--c COUNT, --count COUNT: Número de pacotes para capturar.
--f FILE, --file FILE: Arquivo PCAP para analisar.
--F FILTER, --filter FILTER: Filtro BPF para aplicar (por exemplo, 'tcp', 'udp').
--o OUTPUT, --output OUTPUT: Arquivo de saída para salvar os resultados.
--v, --verbose: Ativa a análise detalhada.
--t TARGET, --target TARGET: Endereço IP alvo para escanear portas.
+### Arguments:
 
-## Funcionalidades
-Monitoramento em Tempo Real: O programa monitora o tráfego de rede em tempo real e exibe informações sobre os pacotes capturados, incluindo protocolos, portas de origem e destino e endereços IP.
-Detecção de Ataques DDoS: Ele detecta possíveis ataques de negação de serviço (DDoS) monitorando a taxa de pacotes recebidos.
-Varredura de Portas: O programa pode escanear portas em um determinado host para verificar quais portas estão abertas.
-Análise Detalhada: A opção verbose permite uma análise mais detalhada dos pacotes capturados.
+- `-i INTERFACE, --interface INTERFACE`: Specifies the network interface to capture packets from (default: eth0).
+- `-c COUNT, --count COUNT`: Number of packets to capture.
+- `-f FILE, --file FILE`: PCAP file to analyze.
+- `-F FILTER, --filter FILTER`: BPF filter to apply (e.g., 'tcp', 'udp').
+- `-o OUTPUT, --output OUTPUT`: Output file to save the results.
+- `-v, --verbose`: Enable detailed analysis.
+- `-t TARGET, --target TARGET`: Target IP address to scan ports.
+
+## Features
+
+- **Real-time Monitoring**: The program monitors real-time network traffic and displays information about the captured packets, including protocols, source and destination ports, and IP addresses.
+- **DDoS Attack Detection**: It detects potential Denial of Service (DDoS) attacks by monitoring the rate of incoming packets.
+- **Port Scanning**: The program can scan ports on a specific host to check which ports are open.
+- **Detailed Analysis**: The verbose option allows for more detailed analysis of the captured packets.
+
+## Usage Examples
+
+1. Monitor real-time network traffic:
+
+    ```
+    python analyzer.py
+    ```
+
+2. Monitor real-time network traffic and save results to a file:
+
+    ```
+    python analyzer.py -o output.txt
+    ```
+
+3. Analyze a PCAP file:
+
+    ```
+    python analyzer.py -f file.txt
+    ```
+
+4. Scan ports on a specific host:
+
+    ```
+    python analyzer.py -t 192.168.1.100
+    ```
+
+
