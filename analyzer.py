@@ -43,6 +43,9 @@ def significant_event_detected(event):
 
 # Função para analisar os pacotes e detectar varredura de portas
 def analyze_port_scan(pkt):
+    if args.file:
+        return False
+    
     if IP in pkt:
         src_ip = pkt[IP].src
         if TCP in pkt:
@@ -50,17 +53,16 @@ def analyze_port_scan(pkt):
             if src_ip not in scanned_ports_by_ip:
                 scanned_ports_by_ip[src_ip] = set()
             scanned_ports_by_ip[src_ip].add(pkt[TCP].dport)
-            # Se o IP de origem escaneou mais portas do que o limite estabelecido, é considerado um scan
+            # Se o IP de origem escaneou mais portas do que o limite estabelecido, é considerado um scan 
             if len(scanned_ports_by_ip[src_ip]) > LIMITSCAN:
                 significant_event_detected(True)
-                print(f"Port scan detected from {src_ip}")
+                print(f"Port scan detected from {src_ip}")   
             else:
                 print(f"No port scan detected from {src_ip}")
 
-
 # Função para detectar um possível DDoS
 def detect_DDoS(current_time):
-    if file.args:
+    if args.file:
       return False
       
     global packet_times
