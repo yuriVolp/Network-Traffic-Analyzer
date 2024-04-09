@@ -114,7 +114,7 @@ def network_monitoring(pkt, output_file=None, verboseArg=None):
             protocol = "ARP"
             verbose += f"[{time}]  {protocol}-IN:{len(pkt[ARP])} Bytes  SRC-MAC:{pkt.src}  DST-MAC:{pkt.dst}  SRC-IP:{pkt[IP].src}  DST-IP:{pkt[IP].dst}"
         else:
-            # Se o protocolo não for reconhecido, você pode lidar com isso de acordo com a sua necessidade
+            # Caso o protocolo não seja reconhecido
             print(f"Protocolo não reconhecido: {pkt.summary()}")
 
         result += f"[+] ==[{protocol}]== Source: {src_ip}:{src_port} --> Destination: {dst_ip}:{dst_port}"
